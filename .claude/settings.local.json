@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git clone:*)",
+      "Bash(mkdir:*)",
+      "Bash(cp:*)",
+      "Bash(start \"C:\\Users\\cicci\\OneDrive\\Desktop\\check\\index.html\")",
+      "Bash(start:*)",
+      "Bash(dir:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(findstr:*)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(curl -L \"https://raw.githubusercontent.com/Checcolino1312/site/main/universita/appunti_basi1.pdf\" -o \"C:\\Users\\cicci\\OneDrive\\Desktop\\check\\universita\\appunti_basi1.pdf\")",
+      "Bash(curl -L \"https://raw.githubusercontent.com/Checcolino1312/site/main/universita/appunti_basi2.pdf\" -o \"C:\\Users\\cicci\\OneDrive\\Desktop\\check\\universita\\appunti_basi2.pdf\")",
+      "Bash(git init:*)",
+      "Bash(git remote add:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

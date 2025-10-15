@@ -1,0 +1,17 @@
+<svg width="400" height="250" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad9" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#047857;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#064e3b;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="250" fill="url(#grad9)"/>
+  <circle cx="100" cy="80" r="20" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="300" cy="80" r="20" fill="rgba(255,255,255,0.1)"/>
+  <line x1="120" y1="80" x2="280" y2="80" stroke="rgba(255,255,255,0.3)" stroke-width="3"/>
+  <text x="200" y="90" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-family="monospace" font-size="12">CLIENT ←→ SERVER</text>
+  <text x="200" y="140" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Reti di Calcolatori</text>
+  <text x="200" y="160" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-family="Arial, sans-serif" font-size="12">TCP/IP Networking</text>
+  <rect x="150" y="180" width="100" height="30" fill="rgba(255,255,255,0.1)" rx="6"/>
+  <text x="200" y="200" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-family="monospace" font-size="10">SOCKET</text>
+</svg>
