@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checcolinato</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            font-family: 'Arial Black', sans-serif;
+        }
+
+        .text {
+            font-size: 5vw;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: 0.2em;
+            padding: 20px;
+            animation: rainbow 3s linear infinite;
+            text-shadow: 
+                0 0 10px currentColor,
+                0 0 20px currentColor,
+                0 0 30px currentColor,
+                0 0 40px currentColor;
+        }
+
+        @keyframes rainbow {
+            0% { color: #ff0000; }
+            14% { color: #ff7f00; }
+            28% { color: #ffff00; }
+            42% { color: #00ff00; }
+            57% { color: #0000ff; }
+            71% { color: #4b0082; }
+            85% { color: #9400d3; }
+            100% { color: #ff0000; }
+        }
+
+        @media (max-width: 768px) {
+            .text {
+                font-size: 8vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="text" id="mainText">SEI STATO CHECCOLINATO</div>
+
+    <script>
+        const text = document.getElementById('mainText');
+        let hue = 0;
+
+        function animateColor() {
+            hue = (hue + 2) % 360;
+            text.style.color = `hsl(${hue}, 100%, 50%)`;
+            requestAnimationFrame(animateColor);
+        }
+
+        animateColor();
+    </script>
+</body>
+</html>
