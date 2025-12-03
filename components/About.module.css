@@ -1,0 +1,140 @@
+.section {
+  padding: 8rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sectionTitle h2 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.gradientText {
+  color: var(--text-primary);
+}
+
+.sectionSubtitle {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  max-width: 500px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.card {
+  background: var(--bg-secondary);
+  backdrop-filter: none;
+  border: 1px solid var(--glass-border);
+  border-radius: 0;
+  padding: 2.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  border-color: var(--primary-color);
+}
+
+.cardTitle {
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  font-size: 1.3rem;
+}
+
+.cardText {
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  line-height: 1.7;
+}
+
+.link {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.passionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.passionItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.passionIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.gradient1 {
+  background: var(--gradient-1);
+}
+
+.gradient2 {
+  background: var(--gradient-2);
+}
+
+.gradient3 {
+  background: var(--gradient-3);
+}
+
+.passionItem h4 {
+  margin-bottom: 0.2rem;
+  font-size: 1rem;
+}
+
+.passionDesc {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 4rem 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .sectionTitle h2 {
+    font-size: 2rem;
+  }
+}

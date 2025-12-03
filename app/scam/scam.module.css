@@ -1,0 +1,42 @@
+.container {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.text {
+  font-size: 5vw;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.2em;
+  padding: 20px;
+  animation: rainbow 3s linear infinite;
+  font-family: 'Arial Black', sans-serif;
+  text-shadow:
+    0 0 5px currentColor,
+    0 0 10px currentColor;
+}
+
+@keyframes rainbow {
+  0% { color: #ff0000; }
+  14% { color: #ff7f00; }
+  28% { color: #ffff00; }
+  42% { color: #00ff00; }
+  57% { color: #0000ff; }
+  71% { color: #4b0082; }
+  85% { color: #9400d3; }
+  100% { color: #ff0000; }
+}
+
+@media (max-width: 768px) {
+  .text {
+    font-size: 8vw;
+  }
+}
