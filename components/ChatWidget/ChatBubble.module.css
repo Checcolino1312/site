@@ -64,6 +64,10 @@
     height: 56px;
   }
 
+  .bubble.open {
+    display: none;
+  }
+
   .tooltip {
     display: none;
   }
