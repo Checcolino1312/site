@@ -1,0 +1,44 @@
+.reposList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.repoLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  background: #F7F5F2;
+  border: 1px solid #E6E2DD;
+  border-radius: 8px;
+  color: #2C2822;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.repoLink:hover {
+  background: #FFE8D9;
+  border-color: #E07B4F;
+  color: #E07B4F;
+  transform: translateX(4px);
+}
+
+.repoLink svg {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.repoLink span {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .repoLink {
+    padding: 0.875rem 1.25rem;
+    font-size: 0.9375rem;
+  }
+}

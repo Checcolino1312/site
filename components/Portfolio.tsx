@@ -164,7 +164,7 @@ const projects: Project[] = [
     tech: ['C Language', 'Algorithms', 'Data Structures'],
     status: 'Materiale',
     statusIcon: 'fa-book',
-    link: '/universita/programmazione1.html',
+    link: '/universita/programmazione1',
     modalContent: {
       category: 'Università',
       title: 'Materiale - Programmazione 1',
@@ -172,7 +172,7 @@ const projects: Project[] = [
         'Qui una raccolta di esercizi svolti da me, presi dal libro "Il linguaggio C. Fondamenti e tecniche di programmazione."'
       ],
       tech: ['C Language', 'Algorithms', 'Data Structures'],
-      link: '/universita/programmazione1.html'
+      link: '/universita/programmazione1'
     }
   },
   {
@@ -186,7 +186,7 @@ const projects: Project[] = [
     tech: ['Java', 'OOP', 'Patterns'],
     status: 'Appunti',
     statusIcon: 'fa-book',
-    link: '/universita/programmazione2.html',
+    link: '/universita/programmazione2',
     modalContent: {
       category: 'Università',
       title: 'Materiale - Programmazione 2',
@@ -194,7 +194,7 @@ const projects: Project[] = [
         'Qui una raccolta di appunti da cui studiare le basi della programmazione orientata agli oggetti ed esercitazioni in Java da cui prendere spunto.'
       ],
       tech: ['Java', 'OOP', 'Patterns'],
-      link: '/universita/programmazione2.html'
+      link: '/universita/programmazione2'
     }
   },
   {
@@ -208,7 +208,7 @@ const projects: Project[] = [
     tech: ['TCP/IP', 'Sockets', 'Protocols'],
     status: 'Teoria',
     statusIcon: 'fa-book',
-    link: '/universita/reti_di_calcolatori.html',
+    link: '/universita/reti-di-calcolatori',
     modalContent: {
       category: 'Università',
       title: 'Materiale - Reti di Calcolatori',
@@ -216,7 +216,7 @@ const projects: Project[] = [
         'Qui una raccolta di appunti da cui studiare Reti di Calcolatori e realizzare un applicazione in C client-server.'
       ],
       tech: ['TCP/IP', 'Sockets', 'Protocols'],
-      link: '/universita/reti_di_calcolatori.html'
+      link: '/universita/reti-di-calcolatori'
     }
   },
   {
@@ -230,7 +230,7 @@ const projects: Project[] = [
     tech: ['SQL', 'ER Model', 'Optimization'],
     status: 'Appunti',
     statusIcon: 'fa-book',
-    link: '/universita/basi_di_dati.html',
+    link: '/universita/basi-di-dati',
     modalContent: {
       category: 'Università',
       title: 'Materiale - Progettazione di Basi di Dati',
@@ -238,7 +238,7 @@ const projects: Project[] = [
         'Qui una raccolta di appunti da cui studiare Progettazione di Basi di Dati e svolgere alcune query in SQL.'
       ],
       tech: ['SQL', 'ER Model', 'Optimization'],
-      link: '/universita/basi_di_dati.html'
+      link: '/universita/basi-di-dati'
     }
   }
 ];
