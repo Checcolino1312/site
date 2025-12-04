@@ -14,7 +14,11 @@
       "Bash(curl -L \"https://raw.githubusercontent.com/Checcolino1312/site/main/universita/appunti_basi2.pdf\" -o \"C:\\Users\\cicci\\OneDrive\\Desktop\\check\\universita\\appunti_basi2.pdf\")",
       "Bash(git init:*)",
       "Bash(git remote add:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push)",
+      "Bash(npm install:*)",
+      "Bash(npm audit fix:*)"
     ],
     "deny": [],
     "ask": []
