@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './ChatBubble.module.css';
 
 interface ChatBubbleProps {
@@ -10,6 +10,24 @@ interface ChatBubbleProps {
 
 export default function ChatBubble({ onClick, isOpen }: ChatBubbleProps) {
   const [isHovered, setIsHovered] = useState(false);
+  const [showAutoTooltip, setShowAutoTooltip] = useState(false);
+
+  useEffect(() => {
+    const showTimer = setTimeout(() => {
+      setShowAutoTooltip(true);
+    }, 4000);
+
+    const hideTimer = setTimeout(() => {
+      setShowAutoTooltip(false);
+    }, 9000);
+
+    return () => {
+      clearTimeout(showTimer);
+      clearTimeout(hideTimer);
+    };
+  }, []);
+
+  const showTooltip = !isOpen && (isHovered || showAutoTooltip);
 
   return (
     <button
@@ -30,9 +48,9 @@ export default function ChatBubble({ onClick, isOpen }: ChatBubbleProps) {
         </svg>
       )}
 
-      {!isOpen && isHovered && (
+      {showTooltip && (
         <div className={styles.tooltip}>
-          Chiacchiera con Checcolino
+          Chatta con Checcolino.ai
         </div>
       )}
     </button>
