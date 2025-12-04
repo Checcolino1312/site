@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .exerciseLink {
@@ -10,26 +10,33 @@
   align-items: center;
   gap: 0.75rem;
   padding: 1rem 1.5rem;
-  background: #F7F5F2;
-  border: 1px solid #E6E2DD;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
   border-radius: 8px;
-  color: #2C2822;
+  color: var(--text-primary);
   text-decoration: none;
   font-weight: 500;
-  transition: all 0.2s;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
 }
 
 .exerciseLink:hover {
-  background: #FFE8D9;
-  border-color: #E07B4F;
-  color: #E07B4F;
-  transform: translateX(4px);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-color);
+  background: var(--bg-secondary);
 }
 
 .exerciseLink svg {
   flex-shrink: 0;
   width: 20px;
   height: 20px;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+.exerciseLink:hover svg {
+  color: var(--primary-color);
 }
 
 .exerciseLink span {
@@ -39,6 +46,6 @@
 @media (max-width: 768px) {
   .exerciseLink {
     padding: 0.875rem 1.25rem;
-    font-size: 0.9375rem;
+    font-size: 0.9rem;
   }
 }
