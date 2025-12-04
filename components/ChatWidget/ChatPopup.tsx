@@ -23,12 +23,14 @@ export default function ChatPopup({ isOpen, onClose }: ChatPopupProps) {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const messagesContainerRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const chatService = useRef(new ChatService());
 
   useEffect(() => {
-    if (isOpen) {
-      messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (isOpen && messagesContainerRef.current) {
+      const container = messagesContainerRef.current;
+      container.scrollTop = container.scrollHeight;
       inputRef.current?.focus();
     }
   }, [messages, isOpen]);
@@ -113,7 +115,7 @@ export default function ChatPopup({ isOpen, onClose }: ChatPopupProps) {
         </div>
 
         {/* Messages */}
-        <div className={styles.messages}>
+        <div ref={messagesContainerRef} className={styles.messages}>
           {messages.map((message) => (
             <div
               key={message.id}
