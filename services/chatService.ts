@@ -1,6 +1,6 @@
 import { Message, ChatResponse } from '@/types/chat';
 
-const API_URL = process.env.NEXT_PUBLIC_CHAT_API_URL || 'http://localhost:3001/api/chat';
+const API_URL = process.env.NEXT_PUBLIC_CHAT_API_URL || 'https://checcolino-ai.vercel.app/api/chat';
 
 export class ChatService {
   async sendMessage(messages: Message[]): Promise<string> {
