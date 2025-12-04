@@ -19,7 +19,9 @@
       "Bash(git push)",
       "Bash(npm install:*)",
       "Bash(npm audit fix:*)",
-      "Bash(npm update:*)"
+      "Bash(npm update:*)",
+      "Bash(git pull:*)",
+      "Bash(git stash:*)"
     ],
     "deny": [],
     "ask": []
