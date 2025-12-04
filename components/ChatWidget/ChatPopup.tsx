@@ -30,8 +30,17 @@ export default function ChatPopup({ isOpen, onClose }: ChatPopupProps) {
   useEffect(() => {
     if (isOpen && messagesContainerRef.current) {
       const container = messagesContainerRef.current;
-      container.scrollTop = container.scrollHeight;
-      inputRef.current?.focus();
+      // Scroll to bottom smoothly
+      setTimeout(() => {
+        container.scrollTop = container.scrollHeight;
+      }, 100);
+
+      // Focus input on mobile
+      if (window.innerWidth <= 768) {
+        setTimeout(() => inputRef.current?.focus(), 300);
+      } else {
+        inputRef.current?.focus();
+      }
     }
   }, [messages, isOpen]);
 
@@ -60,6 +69,13 @@ export default function ChatPopup({ isOpen, onClose }: ChatPopupProps) {
     setInput('');
     setIsLoading(true);
     setError(null);
+
+    // Scroll to bottom immediately after sending
+    setTimeout(() => {
+      if (messagesContainerRef.current) {
+        messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
+      }
+    }, 50);
 
     try {
       const response = await chatService.current.sendMessage([...messages, userMessage]);
