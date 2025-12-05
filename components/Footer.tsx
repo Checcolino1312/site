@@ -1,12 +1,21 @@
 'use client';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faInstagram, faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import styles from './Footer.module.css';
 
-const socialLinks = [
-  { href: 'https://www.facebook.com/francescopaolo.ragusa/', icon: 'fa-facebook-f', label: 'Facebook' },
-  { href: 'https://instagram.com/_frapr_', icon: 'fa-instagram', label: 'Instagram' },
-  { href: 'https://github.com/Checcolino1312', icon: 'fa-github', label: 'GitHub' },
-  { href: 'https://www.linkedin.com/in/francesco-paolo-ragusa/', icon: 'fa-linkedin-in', label: 'LinkedIn' }
+type SocialLink = {
+  href: string;
+  icon: IconDefinition;
+  label: string;
+};
+
+const socialLinks: SocialLink[] = [
+  { href: 'https://www.facebook.com/francescopaolo.ragusa/', icon: faFacebookF, label: 'Facebook' },
+  { href: 'https://instagram.com/_frapr_', icon: faInstagram, label: 'Instagram' },
+  { href: 'https://github.com/Checcolino1312', icon: faGithub, label: 'GitHub' },
+  { href: 'https://www.linkedin.com/in/francesco-paolo-ragusa/', icon: faLinkedinIn, label: 'LinkedIn' }
 ];
 
 export default function Footer() {
@@ -25,7 +34,7 @@ export default function Footer() {
               className={styles.socialLink}
               aria-label={link.label}
             >
-              <i className={`fab ${link.icon}`}></i>
+              <FontAwesomeIcon icon={link.icon} />
             </a>
           ))}
         </div>

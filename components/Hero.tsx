@@ -1,35 +1,12 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRocket, faDownload } from '@fortawesome/free-solid-svg-icons';
+import { useAnimateOnScroll } from '@/hooks/useAnimateOnScroll';
 import styles from './Hero.module.css';
 
 export default function Hero() {
-  const contentRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const elements = entry.target.querySelectorAll('.animate-on-scroll');
-            elements.forEach((el, index) => {
-              setTimeout(() => {
-                el.classList.add('visible');
-              }, index * 100);
-            });
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    if (contentRef.current) {
-      observer.observe(contentRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
+  const contentRef = useAnimateOnScroll<HTMLDivElement>();
 
   return (
     <section className={styles.hero}>
@@ -44,11 +21,11 @@ export default function Hero() {
           </p>
           <div className={`${styles.ctaButtons} animate-on-scroll`}>
             <a href="#portfolio" className={`${styles.btn} ${styles.btnPrimary}`}>
-              <i className="fas fa-rocket"></i>
+              <FontAwesomeIcon icon={faRocket} />
               Scopri i miei progetti
             </a>
             <a href="/FRANCESCO PAOLO RAGUSA CV.pdf" className={`${styles.btn} ${styles.btnSecondary}`}>
-              <i className="fas fa-download"></i>
+              <FontAwesomeIcon icon={faDownload} />
               Scarica CV
             </a>
           </div>

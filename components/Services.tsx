@@ -1,25 +1,34 @@
 'use client';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPalette, faBrain, faChartLine, faCode } from '@fortawesome/free-solid-svg-icons';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import styles from './Services.module.css';
 
-const services = [
+type Service = {
+  icon: IconDefinition;
+  title: string;
+  description: string;
+};
+
+const services: Service[] = [
   {
-    icon: 'fa-palette',
+    icon: faPalette,
     title: 'Web Design',
     description: 'Progettazione e sviluppo di siti web moderni e responsive con focus su UX/UI.'
   },
   {
-    icon: 'fa-brain',
+    icon: faBrain,
     title: 'Smart Solutions',
     description: 'Sviluppo di soluzioni software personalizzate per esigenze specifiche di business.'
   },
   {
-    icon: 'fa-chart-line',
+    icon: faChartLine,
     title: 'IT Consultant',
     description: 'Consulenza tecnica per ottimizzazione infrastrutture IT e risoluzione problematiche.'
   },
   {
-    icon: 'fa-code',
+    icon: faCode,
     title: 'Web Development',
     description: 'Sviluppo di applicazioni web custom con tecnologie moderne e best practices.'
   }
@@ -37,7 +46,7 @@ export default function Services() {
           {services.map((service, index) => (
             <div key={index} className={`${styles.serviceCard} animate-on-scroll`}>
               <div className={styles.serviceIcon}>
-                <i className={`fas ${service.icon}`}></i>
+                <FontAwesomeIcon icon={service.icon} />
               </div>
               <h3 className={styles.serviceTitle}>{service.title}</h3>
               <p className={styles.serviceDescription}>{service.description}</p>

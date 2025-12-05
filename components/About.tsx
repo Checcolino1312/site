@@ -1,5 +1,7 @@
 'use client';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCode, faGraduationCap, faLightbulb } from '@fortawesome/free-solid-svg-icons';
 import styles from './About.module.css';
 
 export default function About() {
@@ -22,7 +24,7 @@ export default function About() {
             <div className={styles.passionsList}>
               <div className={styles.passionItem}>
                 <div className={`${styles.passionIcon} ${styles.gradient1}`}>
-                  <i className="fas fa-code"></i>
+                  <FontAwesomeIcon icon={faCode} />
                 </div>
                 <div>
                   <h4>Sviluppo Web</h4>
@@ -31,7 +33,7 @@ export default function About() {
               </div>
               <div className={styles.passionItem}>
                 <div className={`${styles.passionIcon} ${styles.gradient2}`}>
-                  <i className="fas fa-graduation-cap"></i>
+                  <FontAwesomeIcon icon={faGraduationCap} />
                 </div>
                 <div>
                   <h4>Apprendimento</h4>
@@ -40,7 +42,7 @@ export default function About() {
               </div>
               <div className={styles.passionItem}>
                 <div className={`${styles.passionIcon} ${styles.gradient3}`}>
-                  <i className="fas fa-lightbulb"></i>
+                  <FontAwesomeIcon icon={faLightbulb} />
                 </div>
                 <div>
                   <h4>Innovazione</h4>

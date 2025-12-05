@@ -27,15 +27,15 @@
   position: absolute;
   right: 20px;
   top: 20px;
-  color: var(--text-secondary);
-  font-size: 28px;
-  font-weight: bold;
+  color: white;
+  font-size: 1rem;
   cursor: pointer;
   z-index: 10;
   width: 40px;
   height: 40px;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;

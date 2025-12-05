@@ -75,6 +75,23 @@
   transition: all 0.4s ease;
 }
 
+/* Stili per card cliccabili */
+.portfolioCardLink,
+.portfolioCardClickable {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+  cursor: pointer;
+  outline: none;
+}
+
+.portfolioCardLink:focus .portfolioCard,
+.portfolioCardClickable:focus .portfolioCard {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(17, 17, 17, 0.1);
+}
+
 .portfolioCard {
   background: var(--glass-bg);
   backdrop-filter: blur(20px);
@@ -109,49 +126,6 @@
 
 .portfolioCard:hover .portfolioImage img {
   transform: scale(1.05);
-}
-
-.portfolioOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.9), rgba(168, 85, 247, 0.9));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: all 0.3s ease;
-}
-
-.portfolioCard:hover .portfolioOverlay {
-  opacity: 1;
-}
-
-.portfolioIcons {
-  display: flex;
-  gap: 1rem;
-}
-
-.portfolioIcon {
-  width: 50px;
-  height: 50px;
-  background: rgba(255, 255, 255, 0.2);
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.portfolioIcon:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: scale(1.1);
 }
 
 .portfolioContent {
@@ -239,7 +213,7 @@
   font-size: 0.8rem;
 }
 
-.stat i {
+.stat svg {
   color: var(--primary-color);
 }
 

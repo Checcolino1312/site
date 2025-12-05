@@ -1,20 +1,11 @@
 'use client';
 
 import { useEffect } from 'react';
+import Image from 'next/image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExternalLinkAlt, faTimes } from '@fortawesome/free-solid-svg-icons';
 import styles from './PortfolioModal.module.css';
-
-type Project = {
-  id: string;
-  category: 'web' | 'university';
-  image: string;
-  modalContent: {
-    category: string;
-    title: string;
-    description: string[];
-    tech: string[];
-    link?: string;
-  };
-};
+import { Project } from '@/data/projects';
 
 type Props = {
   project: Project;
@@ -40,12 +31,24 @@ export default function PortfolioModal({ project, onClose }: Props) {
   }, [onClose]);
 
   return (
-    <div className={styles.modal} onClick={onClose}>
+    <div className={styles.modal} onClick={onClose} role="dialog" aria-modal="true">
       <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
-        <span className={styles.modalClose} onClick={onClose}>&times;</span>
+        <button
+          className={styles.modalClose}
+          onClick={onClose}
+          aria-label="Chiudi"
+        >
+          <FontAwesomeIcon icon={faTimes} />
+        </button>
         <div className={styles.modalBody}>
           <div className={styles.modalImage}>
-            <img src={project.image} alt={project.modalContent.title} />
+            <Image
+              src={project.image}
+              alt={project.modalContent.title}
+              width={500}
+              height={400}
+              style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+            />
           </div>
           <div className={styles.modalInfo}>
             <div className={styles.modalCategory}>{project.modalContent.category}</div>
@@ -60,7 +63,7 @@ export default function PortfolioModal({ project, onClose }: Props) {
             </div>
             {project.modalContent.link && (
               <a href={project.modalContent.link} className={styles.modalBtn} target="_blank" rel="noopener noreferrer">
-                <i className="fas fa-external-link-alt"></i>
+                <FontAwesomeIcon icon={faExternalLinkAlt} />
                 Vedi {project.category === 'web' ? 'il sito' : 'la sezione'}
               </a>
             )}
