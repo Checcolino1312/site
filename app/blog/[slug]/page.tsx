@@ -1,8 +1,8 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faCalendar, faClock, faTag, faShare, faTwitter, faLinkedin } from '@fortawesome/free-solid-svg-icons';
-import { faTwitter as faTwitterBrand, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faArrowLeft, faCalendar, faClock, faTag } from '@fortawesome/free-solid-svg-icons';
+import { faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { blogPosts } from '@/data/projects';
 import styles from './article.module.css';
 
@@ -125,7 +125,7 @@ export default async function ArticlePage({ params }: Props) {
                 className={styles.shareBtn}
                 aria-label="Condividi su Twitter"
               >
-                <FontAwesomeIcon icon={faTwitterBrand} />
+                <FontAwesomeIcon icon={faTwitter} />
               </a>
               <a
                 href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://francescopaoloragusa.it/blog/${post.slug}`)}`}
